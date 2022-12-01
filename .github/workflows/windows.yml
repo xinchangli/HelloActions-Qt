@@ -27,7 +27,11 @@ jobs:
       - name: build-msvc
         shell: cmake -P {0}
         run: |
-        set(make_program "bin/jom")
-        execute_process(
-          COMMAND ${make_program}
-        )
+         set(bat "C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Auxiliary/Build/vcvars64.bat")
+         execute_process(
+           COMMAND ${bat}
+         )
+         set(make_program "jom")
+         execute_process(
+           COMMAND ${make_program}
+         )
