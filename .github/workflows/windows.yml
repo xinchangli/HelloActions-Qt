@@ -18,13 +18,13 @@ jobs:
 
     steps:
       - name: Install Qt
-        uses: jurplel/install-qt-action@master
+        uses: jurplel/install-qt-action@v3.0.0
         with:
           version: ${{ matrix.qt_ver }}
           target: ${{ matrix.qt_target }}
           arch: ${{ matrix.qt_arch }}
 
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v1
         with:
           fetch-depth: 1
 
