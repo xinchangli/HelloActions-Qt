@@ -27,7 +27,7 @@ jobs:
       - name: build-msvc
         shell: cmake -P {0}
         run: |
-        set(make_program "qtcreator/bin/jom")
+        set(make_program "bin/jom")
         execute_process(
           COMMAND ${make_program}
         )
